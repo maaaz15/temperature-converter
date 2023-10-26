@@ -1,44 +1,35 @@
-const calculateTemp = () =>{
-    let temp = document.getElementById('temp').value;
+const form = document.querySelector('form')
 
-    let units = document.getElementById('units');
-    const unitsType = units.options[units.selectedIndex].value;
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
 
-    const celToFar = (cel) =>{
-        let Farenheit = ((cel * 1.8) + 32);
-        return Farenheit;
+    const temp = parseInt(document.querySelector("#temp").value)
+    const units = document.querySelector("#units").value
+
+    const celToFah = (celcius) => {
+        let fahrenheit = ((celcius * 9 / 5) + 32)
+        return fahrenheit
     }
 
-    const farToCel = (far) =>{
-        let Celsius = ((far - 32) / 1.8);
-        return Celsius;
+    const fahToCel = (fahrenheit) => {
+        let celcius = ((fahrenheit - 32) * 5 / 9)
+        return celcius
     }
 
-    // const kelToCel = (kel) =>{
-    //     let Kelvin = (cel + 273.15);
-    //     return Kelvin;
-    // }
-    // const celToKel = (cel) =>{
-    //     let Celsius = (cel - 273.15);
-    //     return Celsius;
-    // }
-    // const kelToFar = (kel) =>{
-    //     let Kelvin = (((kel - 273.15) * 1.8) + 32);
-    //     return Kelvin;
-    // }
-    // const farToKel = (far) =>{
-    //     let Kelvin = (((far - 32) / 1.8) + 273.15);
-    //     return Kelvin;
-    // }
-
-    let result;
-
-    if(unitsType == 'cel'){
-        result = celToFar(temp);
-        document.querySelector('.result').innerHTML = `${result.toFixed(2)}° Farenheit`;
+    if (temp === "" || isNaN(temp)) {
+        result.innerHTML = 'Please enter valid input'
     }
     else{
-        result = farToCel(temp);
-        document.querySelector('.result').innerHTML = `${result.toFixed(2)}° Celsius`;
+        if (units === 'celcius') {
+            result = celToFah(temp)
+            document.querySelector('#result').innerHTML = `${result.toFixed(2)}° Fahrenheit`;
+            console.log(result);
+        }
+        else{
+            result = fahToCel(temp)
+            document.querySelector('#result').innerHTML = `${result.toFixed(2)}° Celsius`;
+            console.log(result);
+        }
     }
-}
+
+})
