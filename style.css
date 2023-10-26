@@ -1,100 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap');
-*{
-    font-family: 'Inter', sans-serif;
-    background-color: black;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+html{
+    margin: 0;
 }
-.box{
-    color: white;
-    position: absolute;
-    top: 15%;
-    left: 2%;
+body{
+    margin: 0;
+    font-family: Inter, san-serif;
+    color: black;
+    background-color: white;
 }
-
 h1{
-    font-size: xxx-large;
-}
-p{
-    font-size: x-large;
-}
-#temp{
-    margin: 2rem 0rem 0rem;
+    margin: 30px;
     font-weight: 700;
-    width: 150px;
-    height: 40px;
-    border-radius: 12px;
-    background-color: white;
 }
-option{
-    width: 470px;
+.desc{
+    margin-bottom: 50px;
     font-weight: 600;
-    background-color: white;
 }
-#units{
-    font-weight: 700;
-    width: 80px;
+.container{
+    margin: 150px auto 100px;
+    width: 80%;
+    text-align: center;
+}
+input{
+    border: 2px solid black;
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    font-weight: 600;
+    padding-left: 10px;
+}
+select{
+    border: 2px solid black;
+    height: 34px;
+    width: 90px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+button{
+    font-size: medium;
+    font-weight: bold;
     height: 40px;
-    border-radius: 12px;
-    background-color: white;
+    width: 120px;
+    margin-top: 30px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
 }
-.submit{
-    margin: 2rem 0rem 0rem;
-    font-weight: 700;
-    width: 80px;
-    height: 40px;
-    border-radius: 12px;
-    background-color: white;
-}
-.result{
-    margin: 3rem 0rem 0rem;
+#result{
     font-size: xx-large;
-}
-.animate-charcter
-{
-   /* text-transform: uppercase; */
-  background-image: linear-gradient(
-    -225deg,
-    #0099F7 0%,
-    #7b00ff 29%,
-    #ff87af 67%,
-    #F11712 100%
-  );
-  background-size: auto auto;
-  background-clip: border-box;
-  background-size: 200% auto;
-  color: #fff;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textclip 12s linear infinite;
-  display: inline-block;
+    font-weight: bolder;
+    margin-top: 50px;
 }
 
-@keyframes textclip {
-  to {
-    background-position: 200% center;
-  }
+@media (max-width: 400px) {
+    h1{
+        margin: 30px;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .desc{
+        margin-bottom: 20px;
+    }
+    .container{
+        margin: 150px auto 100px;
+        width: 80%;
+        text-align: center;
+    }
+    input{
+        border: 2px solid black;
+        height: 30px;
+        width: 200px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+    .inputfield{
+        padding: 20px;
+    }
+    select{
+        border: 2px solid black;
+        height: 34px;
+        width: 90px;
+        border-radius: 5px;
+    }
+    button{
+        height: 30px;
+        width: 100px;
+        margin-top: 10px;
+        font-size: small;
+    }
+    #result{
+        font-size: large;
+        font-weight: bolder;
+        margin-top: 50px;
+    }
 }
-
-.lineRight {
-    animation: 2s anim-lineRight ease-out;
-  }
-  @keyframes anim-lineRight {
-    0% {
-      opacity: 0;
-      filter: blur(5px);
-      transform: translateX(-100%);
-    }
-    20% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-      filter: blur(0px);
-      transform: translateX(0%);
-    }
-    100% {
-      opacity: 1;
-      filter: blur(0px);
-      transform: translateX(0%);
-    }
-  }
