@@ -2,28 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>ConTemp</title>
+    <title>Temperature Converter</title>
 </head>
 <body>
-    <div class="box" id="main">
-        <div class="header">
-            <h1 class="animate-charcter">Temperature Converter</h1>
-            <p class="lineRight">Convert Celsius to Farenheit and vice versa</p>
-        </div>
-        <form id="tempCalc" onsubmit="calculateTemp(); return false">
-            <input type="number" name="temp" id="temp" step=".01" placeholder="Enter the value">
-            <select name="units" class="units" id="units">
-                <option class="unit" value="cel">Celsius</option>
-                <option class="unit" value="far">Farenheit</option>
-                <!-- <option class="unit" value="kel">Kelvin</option> -->
-            </select> <br>
-            <input type="submit" class="submit" name="temp" value="Convert">
-            <div class="result"></div>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <p class="desc">Convert Celsius to Farenheit and vice versa</p>
+        <form>
+            <p class="inputfield">
+                <input type="text" id="temp" placeholder="Enter any value">
+                <select name="units" id="units">
+                    <option value="celcius">Celcius</option>
+                    <option value="fahrenheit">Fahrenheit</option>
+                </select>
+            </p>
+            <button>Calculate</button>
+            <div id="result"></div>
         </form>
-    </div>
+    </div>    
+
+<script src="script.js"></script>
 </body>
 </html>
