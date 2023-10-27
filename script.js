@@ -3,7 +3,7 @@ const form = document.querySelector('form')
 form.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    const temp = document.querySelector("#temp").value
+    const temp = parseFloat(document.querySelector("#temp").value)
     const units = document.querySelector("#units").value
 
     // Celsius
