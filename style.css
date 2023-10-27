@@ -52,6 +52,11 @@ button{
     font-weight: bolder;
     margin-top: 50px;
 }
+#resultalt{
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-top: 20px;
+}
 
 @media (max-width: 400px) {
     h1{
@@ -93,5 +98,10 @@ button{
         font-size: large;
         font-weight: bolder;
         margin-top: 50px;
+    }
+    #resultalt{
+        font-size: large;
+        font-weight: bolder;
+        margin-top: 20px;
     }
 }
